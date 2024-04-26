@@ -1,0 +1,15 @@
+{
+  "name": "my-server",
+  "version": "1.0.0",
+  "description": "First project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

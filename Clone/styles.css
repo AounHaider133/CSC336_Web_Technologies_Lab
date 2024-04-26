@@ -1,0 +1,168 @@
+.wrapper {
+  color: #fff;
+  background-color: #000;
+  height: 70px;
+  margin-top: -4px;
+  display: flex;
+  align-items: center;
+}
+header {
+  font-size: 30px;
+}
+a {
+  text-decoration: none;
+  margin: 0 32px;
+  color: white;
+  font-weight: bold;
+}
+.primary {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  padding: 0;
+}
+ul {
+  align-items: center;
+  display: flex;
+  padding-left: 4px;
+}
+li {
+  list-style-type: none;
+}
+li a {
+  margin: 0 8px;
+}
+span {
+  font-size: 14px;
+}
+.element {
+  /* border: 2px solid white; */
+  height: 20px;
+  width: 20px;
+}
+a span:hover {
+  text-decoration: underline;
+}
+.search img {
+  background-color: black;
+  cursor: pointer;
+}
+
+/* tabs */
+
+body .container {
+  width: 450px;
+  position: absolute;
+  top: 51.3%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 0;
+  box-shadow: 0 0 100px RGBA(0, 0, 0, 0.5);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+body .container input {
+  display: none;
+}
+
+body .container input:checked + label {
+  background: #eee;
+}
+
+body .container label {
+  display: inline-block;
+  font-size: 16px;
+  height: 38px;
+  line-height: 36px;
+  width: 33.3%;
+  text-align: center;
+  background: #f4f4f4;
+  color: #555;
+  position: relative;
+  transition: background 0.25s ease;
+  cursor: pointer;
+}
+body .container label::after {
+  content: "";
+
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  /* display: block; */
+  background: #ccc;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  transition: opacity 0.25s ease;
+}
+
+body .container label:hover::after {
+  opacity: 1;
+}
+
+body .container .line {
+  position: absolute;
+  height: 2px;
+  background: black;
+  width: 33.6%;
+  top: 34px;
+  left: 0;
+  transition: left 0.25s ease;
+}
+
+body .container .content-container {
+  position: relative;
+  height: 300px;
+  font-size: 16px;
+}
+
+body .container .content-container .content {
+  position: absolute;
+  padding-right: 32px;
+  padding-top: 2px;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  color: #333;
+}
+
+body .container .content-container .content ul li p {
+  font-size: 14px;
+  /* padding-right: 10px; */
+  display: block;
+}
+
+/* Manually expanded rules for each tab */
+body .container #tab1:checked ~ .line {
+  left: 0%;
+}
+
+body .container #tab1:checked ~ .content-container #c1 {
+  opacity: 1;
+}
+
+body .container #tab2:checked ~ .line {
+  left: 33.3%;
+}
+
+body .container #tab2:checked ~ .content-container #c2 {
+  opacity: 1;
+}
+
+body .container #tab3:checked ~ .line {
+  left: 66.6%;
+}
+
+body .container #tab3:checked ~ .content-container #c3 {
+  opacity: 1;
+}
+
+body .container #tab4:checked ~ .line {
+  left: 100%;
+}
+
+body .container #tab4:checked ~ .content-container #c4 {
+  opacity: 1;
+}
